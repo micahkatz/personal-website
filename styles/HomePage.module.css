@@ -1,0 +1,50 @@
+.container {
+    /* padding: 0 2rem; */
+}
+
+.main {
+    min-height: 100vh;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+
+    /* background-color: hsl(335, 100%, 80%);
+    background-image: radial-gradient(
+            at 0% 0%,
+            hsl(335, 100%, 80%) 0px,
+            transparent 50%
+        ),
+        radial-gradient(at 66% 66%, hsl(365, 100%, 77.75%) 0px, transparent 50%),
+        radial-gradient(at 46% 4%, hsl(275, 100%, 72.5%) 0px, transparent 50%),
+        radial-gradient(at 23% 87%, hsl(380, 100%, 81.25%) 0px, transparent 50%),
+        radial-gradient(at 20% 62%, hsl(275, 100%, 69%) 0px, transparent 50%),
+        radial-gradient(at 87% 43%, hsl(485, 100%, 82.25%) 0px, transparent 50%); */
+}
+
+.footer {
+    display: flex;
+    flex: 1;
+    padding: 2rem 0;
+    border-top: 1px solid #eaeaea;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    margin: 0;
+    line-height: 1.15;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.contentOverlay {
+    /* position: absolute; */
+}
+
+.aboutSection {
+    height: calc(100vh - 3.5rem);
+    display: flex;
+    flex-direction: column;
+}

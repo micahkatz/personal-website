@@ -1,0 +1,10 @@
+.tileContainer {
+  border: solid var(--color-text-secondary);
+  border-width: 1px;
+  border-radius: 1rem;
+  padding: 1rem;
+  /* width: 20rem; */
+}
+.description {
+
+}
