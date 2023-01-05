@@ -10,6 +10,7 @@ import ProjectsPage from './projects'
 import MoonIcon from 'assets/moon.svg'
 import { generateJSXMeshGradient } from "meshgrad";
 import NavBar from '../components/NavBar'
+import ExperiencePage from './experience';
 export default function Home() {
   const [theme, setTheme] = React.useState(DARK_THEME);
 
@@ -51,7 +52,7 @@ export default function Home() {
           {/* <MoonIcon className='icon' /> */}
         </div>
         <ProjectsPage />
-
+        <ExperiencePage />
 
       </main>
     </div>

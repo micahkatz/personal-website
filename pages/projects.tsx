@@ -1,11 +1,15 @@
 import React from 'react'
 import ProjectTile from '../components/ProjectTile'
+import Section from '../components/Section'
 
 const ProjectsPage = () => {
     return (
-        <div className='text-left'>
-            <h1 className='text-primary-text text-xl font-semibold'>Projects</h1>
-            <div className='flex flex-wrap items-center justify-center mt-2'>
+        <Section
+            title='Projects'
+            className='text-left'
+            id='projects'
+        >
+            <div className='grid lg:grid-cols-3 mt-2 md:grid-cols-2 sm:grid-cols-1'>
                 <ProjectTile
                     title='Personal Website'
                     dates='2017-2022'
@@ -31,7 +35,7 @@ const ProjectsPage = () => {
                     skills={['Reactjs', 'Typescript']}
                 />
             </div>
-        </div>
+        </Section>
     )
 }
 

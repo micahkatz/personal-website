@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import styles from 'styles/NavBar.module.css'
 import LogoImg from '../assets/logo.png'
@@ -9,8 +10,8 @@ const NavBar = (props: Props) => {
             {/* <span className='text-primary-text'>MK</span> */}
             <img src='logo.png' className='w-10' />
             <div className=''>
-                <span className='text-primary-text mr-4'>About</span>
-                <span className='text-primary-text'>Contact</span>
+                <Link className='text-primary-text mr-4' href='#projects'>Projects</Link>
+                <Link className='text-primary-text mr-4' href='#experience'>Experience</Link>
             </div>
         </div>
     )
