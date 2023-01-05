@@ -12,6 +12,24 @@ const ProjectsPage = () => {
                     description='Exercitation dolor ad nisi quis ea tempor enim et eu velit. Anim id reprehenderit esse do'
                     skills={['Reactjs', 'Typescript']}
                 />
+                <ProjectTile
+                    title='Personal Website'
+                    dates='2017-2022'
+                    description='Exercitation dolor ad nisi quis ea tempor enim et eu velit. Anim id reprehenderit esse do'
+                    skills={['Reactjs', 'Typescript']}
+                />
+                <ProjectTile
+                    title='Personal Website'
+                    dates='2017-2022'
+                    description='Exercitation dolor ad nisi quis ea tempor enim et eu velit. Anim id reprehenderit esse do'
+                    skills={['Reactjs', 'Typescript']}
+                />
+                <ProjectTile
+                    title='Personal Website'
+                    dates='2017-2022'
+                    description='Exercitation dolor ad nisi quis ea tempor enim et eu velit. Anim id reprehenderit esse do'
+                    skills={['Reactjs', 'Typescript']}
+                />
             </div>
         </div>
     )

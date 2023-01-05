@@ -5,7 +5,7 @@ type Props = {}
 
 const NavBar = (props: Props) => {
     return (
-        <div className={`${styles.navBar} flex flex-row pt-8 flex-1 justify-between sticky top-0`}>
+        <div className={`${styles.navBar} bg-primary-background flex flex-row pt-8 flex-1 justify-between sticky top-0`}>
             {/* <span className='text-primary-text'>MK</span> */}
             <img src='logo.png' className='w-10' />
             <div className=''>

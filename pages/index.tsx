@@ -45,7 +45,7 @@ export default function Home() {
           <h1 className={'text-4xl font-bold text-primary-text'}>
             I build things for the web
           </h1>
-          <p className='text-md'>
+          <p className={'text-md text-primary-text'}>
             Non excepteur dolor deserunt ipsum. Irure mollit elit deserunt amet enim labore adipisicing fugiat voluptate veniam non ipsum tempor. Enim mollit duis non mollit est sint qui sunt. Mollit anim laborum sit eu tempor tempor irure elit esse in.
           </p>
           {/* <MoonIcon className='icon' /> */}
