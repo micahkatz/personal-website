@@ -1,6 +1,6 @@
 // src/themes/base.ts
 export default {
-    primary: '#61DAFB',
+    primary: '#9FA0C3',
     secondary: '#254E70',
     negative: '#e45b78',
     positive: '#A3D9B1',

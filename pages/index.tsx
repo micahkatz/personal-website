@@ -21,7 +21,7 @@ export default function Home() {
     applyTheme(theme);
   }, [theme]);
   return (
-    <div className={`${styles.container} bg-primary-background flex-1`}>
+    <div className={`${styles.container} bg-primary-background flex-1 scroll-smooth`}>
       <Head>
         <title className='text-lg text-primary-text'>Micah Katz</title>
         <meta name="description" content="Micah Katz's personal website" />
@@ -29,13 +29,16 @@ export default function Home() {
       </Head>
 
       <main
-        className={`${styles.main} px-8`}
+        className={`${styles.main} px-8 md:px-20 scroll-smooth`}
 
       // style={generateJSXMeshGradient(6)}
       // style=""
       >
         <NavBar />
-        <div className={`${styles.aboutSection} align-center justify-center`}>
+        <div
+          id='about'
+          className={`${styles.aboutSection} align-center justify-center`}
+        >
 
           <h3 className={'text-lg font-bold text-primary-text'}>
             Hi my name is
@@ -43,7 +46,7 @@ export default function Home() {
           <h1 className={'text-6xl font-bold text-primary-text'}>
             Micah Katz
           </h1>
-          <h1 className={'text-4xl font-bold text-primary-text'}>
+          <h1 className={'text-4xl font-bold text-primary'}>
             I build things for the web
           </h1>
           <p className={'text-md text-primary-text'}>
