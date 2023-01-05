@@ -8,8 +8,8 @@ interface Props extends React.PropsWithChildren {
 
 const Section = (props: Props) => {
     return (
-        <div className={`mb-16 ${props.className}`} id={props.id}>
-            <h1 className='text-primary-text text-xl font-semibold mb-4'>{props.title}</h1>
+        <div className={`mb-16 ${props.className}  animate-fade`} id={props.id}>
+            <h1 className='text-primary-text text-3xl font-semibold mb-8'>{props.title}</h1>
             {props.children}
         </div>
     )

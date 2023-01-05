@@ -16,7 +16,17 @@ module.exports = {
                 'sec-background': 'var(--background-sec)',
                 'primary-text': 'var(--color-text-primary)',
                 'secondary-text': 'var(--color-text-secondary)',
+                'hover-background': 'var(--hover-background)',
             },
+            animation: {
+                fade: 'fadeIn 1s ease-in',
+            },
+            keyframes: (theme) => ({
+                fadeOut: {
+                    '0%': { opacity: 0 },
+                    '100%': { opacity: 1 },
+                },
+            }),
         },
         backgroundColor: (theme) => ({
             ...theme('colors'),

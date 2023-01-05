@@ -15,7 +15,7 @@ const NavBar = (props: Props) => {
                 <Link className='text-primary-text mr-4 hover:text-primary' href='#about'>About</Link>
                 <Link className='text-primary-text mr-4 hover:text-primary' href='#projects'>Projects</Link>
                 <Link className='text-primary-text mr-4 hover:text-primary' href='#experience'>Experience</Link>
-                <Link className='text-primary-text mr-4 hover:text-primary' href='#skills'>Skills</Link>
+                {/* <Link className='text-primary-text mr-4 hover:text-primary' href='#skills'>Skills</Link> */}
                 <Link className='text-primary-text mr-4 hover:text-primary' href='#contact'>Contact</Link>
             </div>
         </div>

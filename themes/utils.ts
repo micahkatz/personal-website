@@ -43,5 +43,6 @@ export const mapTheme = (variables: ITheme): IMappedTheme => {
         '--color-text-secondary': variables.textSecondary || '',
         '--background-primary': variables.backgroundPrimary || '',
         '--background-sec': variables.backgroundSecondary || '',
+        '--hover-background': variables.hoverBackground || '',
     };
 };
