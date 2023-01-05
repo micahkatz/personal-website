@@ -11,6 +11,9 @@ import MoonIcon from 'assets/moon.svg'
 import { generateJSXMeshGradient } from "meshgrad";
 import NavBar from '../components/NavBar'
 import ExperiencePage from './experience';
+import AboutPage from './about';
+import ContactPage from './contact';
+import Footer from '../components/Footer'
 export default function Home() {
   const [theme, setTheme] = React.useState(DARK_THEME);
 
@@ -35,28 +38,11 @@ export default function Home() {
       // style=""
       >
         <NavBar />
-        <div
-          id='about'
-          className={`${styles.aboutSection} align-center justify-center`}
-        >
-
-          <h3 className={'text-lg font-bold text-primary-text'}>
-            Hi my name is
-          </h3>
-          <h1 className={'text-6xl font-bold text-primary-text'}>
-            Micah Katz
-          </h1>
-          <h1 className={'text-4xl font-bold text-primary'}>
-            I build things for the web
-          </h1>
-          <p className={'text-md text-primary-text'}>
-            Non excepteur dolor deserunt ipsum. Irure mollit elit deserunt amet enim labore adipisicing fugiat voluptate veniam non ipsum tempor. Enim mollit duis non mollit est sint qui sunt. Mollit anim laborum sit eu tempor tempor irure elit esse in.
-          </p>
-          {/* <MoonIcon className='icon' /> */}
-        </div>
+        <AboutPage />
         <ProjectsPage />
         <ExperiencePage />
-
+        {/* <ContactPage /> */}
+        <Footer />
       </main>
     </div>
   )

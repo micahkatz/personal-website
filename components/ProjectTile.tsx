@@ -10,7 +10,7 @@ type Props = {
 
 const ProjectTile = (props: Props) => {
   return (
-    <div className={`${styles.tileContainer} py-4 px-4 flex flex-col rounded-xl bg-sec-background`}>
+    <div className={`${styles.tileContainer} py-8 px-6 flex flex-col rounded-xl bg-sec-background`}>
       <div className='flex-1'>
         <h2 className='title font-bold text-primary-text'>{props.title}</h2>
         <h2 className='text-sm font-medium text-secondary-text pb-1'>{props.dates}</h2>
@@ -24,9 +24,9 @@ const ProjectTile = (props: Props) => {
           <h3 className='text-sm font-light text-secondary-text pb-1 pt-2'>{props.description}</h3>
         )}
       </div>
-      <div className='flex pt-1'>
+      <div className='flex pt-4'>
         {props.skills?.map((skill) => (
-          <p className='text-sm font-medium text-primary-text pr-2'>{skill}</p>
+          <p className='text-sm font-light text-secondary-text mr-4'>{skill}</p>
         ))}
       </div>
     </div>
