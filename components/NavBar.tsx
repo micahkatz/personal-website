@@ -9,7 +9,7 @@ const NavBar = (props: Props) => {
         <div className={`bg-primary-background flex flex-row pt-8 flex-1 justify-between sticky top-0 pb-4`}>
             {/* <span className='text-primary-text'>MK</span> */}
             <div className='flex flex-1'>
-                <img src='logo.png' className='w-10 object-contain' />
+                <img src='logo.png' className='w-14 object-contain' />
             </div>
             <div className='collapse md:visible flex items-center'>
                 <Link className='text-primary-text mr-4 hover:text-primary' href='#about'>About</Link>
