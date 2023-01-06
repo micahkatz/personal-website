@@ -16,10 +16,10 @@ const about = (props: Props) => {
                 Micah Katz
             </h1>
             <h1 className={'text-3xl md:text-6xl font-bold text-primary mb-6'}>
-                I build things for the web
+                I'm a Full-Stack Developer
             </h1>
             <p className={'text-lg text-secondary-text'}>
-                Primarily experienced in ReactJS and React-Native, with background in NodeJS.
+                Primarily experienced in React.js and React-Native, with background in Express, NodeJS, Docker, and TypeScript
             </p>
             {/* <MoonIcon className='icon' /> */}
         </div>
