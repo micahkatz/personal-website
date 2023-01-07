@@ -1,5 +1,9 @@
 import React from 'react'
 import styles from '../styles/About.module.css'
+import { FiGithub, FiInstagram } from 'react-icons/fi'
+import { FaLinkedin, FaFacebook } from 'react-icons/fa'
+import { ImStackoverflow } from 'react-icons/im'
+
 type Props = {}
 
 const about = (props: Props) => {
@@ -22,6 +26,44 @@ const about = (props: Props) => {
                 I am primarily experienced in React.js and React-Native, with background in Express, NodeJS, Docker, and TypeScript
             </p>
             {/* <MoonIcon className='icon' /> */}
+            <div className='py-8 flex flex-wrap'>
+                <a
+                    className='mr-8'
+                    href='https://www.linkedin.com/in/micahkatz/'
+                    target='_blank'
+                >
+                    <FaLinkedin className='text-secondary-text transition-all hover:text-primary hover:scale-110' size='2rem' />
+                </a>
+                <a
+                    className='mr-8'
+                    href='https://www.github.com/micahkatz'
+                    target='_blank'
+                >
+                    <FiGithub className='text-secondary-text transition-all hover:text-primary hover:scale-110' size='2rem' />
+                </a>
+                <a
+                    className='mr-8'
+                    href='https://stackoverflow.com/users/8156575/micah-katz'
+                    target='_blank'
+                >
+                    <ImStackoverflow className='text-secondary-text transition-all hover:text-primary hover:scale-110' size='2rem' />
+                </a>
+                <a
+                    className='mr-8'
+                    href='https://instagram.com/themicahkatz'
+                    target='_blank'
+                >
+                    <FiInstagram className='text-secondary-text transition-all hover:text-primary hover:scale-110' size='2rem' />
+                </a>
+                <a
+                    className='mr-8'
+                    href='https://facebook.com/themicahkatz'
+                    target='_blank'
+                >
+                    <FaFacebook className='text-secondary-text transition-all hover:text-primary hover:scale-110' size='2rem' />
+                </a>
+            </div>
+
         </div>
     )
 }
