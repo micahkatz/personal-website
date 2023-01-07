@@ -15,12 +15,14 @@ const ProjectsPage = () => {
                     dates='Jan 2023 - Jan 2023'
                     description={['Developed my personal website to create a singular place for all of my information.']}
                     skills={['React.js', 'Next.js', 'TypeScript', 'TailwindCSS', 'Docker', 'Google Cloud']}
+                    githubLink='https://github.com/micahkatz/personal-website'
                 />
                 <ProjectTile
                     title='Fire Alarm Safety Website'
                     dates='Dec 2022 - Jan 2023'
                     description={['Developed a React.js website that displays the current people in the building for a school as a safety measure.']}
                     skills={['React.js', 'Next.js', 'TypeScript']}
+                    githubLink='https://github.com/micahkatz/epstein-rfid-ui'
                 />
                 <ProjectTile
                     title='Social Media App (Personal Project)'
@@ -42,12 +44,14 @@ const ProjectsPage = () => {
                     dates='Nov 2019 - Feb 2020'
                     description={['Designed a system for an organization in Massachusetts that required an RFID card to enter. It processes over 50 cards (one per person) and stores logs on a SD card. It will trigger a garage door to open using Arduino relay switches.']}
                     skills={['Arduino']}
+                    githubLink='https://github.com/micahkatz/GarageDoorRFID'
                 />
                 <ProjectTile
                     title='Summer Camp Mealtimes Website (Personal Project)'
                     dates='June 2019 – July 2019'
                     description={['Built a simple website for a summer camp (6 Points Sci-Tech Academy in Mass.) that displayed the status of an AWS database – to help regulate camper meal times. This was shown on TVs in the cafeteria and included an admin dashboard and announcement features.']}
                     skills={['React.js', 'AWS']}
+                    githubLink='https://github.com/micahkatz/Sci-Tech-Queue-Website'
                 />
             </div>
         </Section>
