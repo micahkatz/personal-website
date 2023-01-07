@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { MutableRefObject } from 'react'
 import styles from '../styles/ProjectTile.module.css'
 import { FiGithub } from 'react-icons/fi'
 
@@ -11,8 +11,11 @@ type Props = {
 }
 
 const ProjectTile = (props: Props) => {
+
   return (
-    <div className={`${styles.tileContainer} py-8 px-6 flex flex-col rounded-xl bg-sec-background transition ease-in-out delay-150 hover:-translate-y-2`}>
+    <div
+      className={`${styles.tileContainer} py-8 px-6 flex flex-col rounded-xl bg-sec-background transition ease-in-out delay-150 hover:-translate-y-2`}
+    >
       <div className='flex-1'>
         <div className='flex justify-between items-center'>
           <div>
