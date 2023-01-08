@@ -2,7 +2,7 @@ import React from 'react'
 import styles from '../styles/About.module.css'
 import { FiGithub, FiInstagram } from 'react-icons/fi'
 import { FaLinkedin, FaFacebook } from 'react-icons/fa'
-import { ImStackoverflow } from 'react-icons/im'
+import { ImStackoverflow, ImNpm } from 'react-icons/im'
 
 type Props = {}
 
@@ -10,7 +10,7 @@ const about = (props: Props) => {
     return (
         <div
             id='about'
-            className={`${styles.aboutSection} align-center justify-center animate-fade`}
+            className={`${styles.aboutSection} align-center justify-center animate-fade pt-32`}
         >
 
             <h3 className={'text-md md: text-lg font-bold text-primary-text mb-4'}>
@@ -50,13 +50,20 @@ const about = (props: Props) => {
                 </a>
                 <a
                     className='mr-8 animate-fade-in-4'
+                    href='https://www.npmjs.com/~micahkatz'
+                    target='_blank'
+                >
+                    <ImNpm className='text-secondary-text transition-transform hover:text-primary hover:scale-110' size='2rem' aria-label='npm' />
+                </a>
+                <a
+                    className='mr-8 animate-fade-in-5'
                     href='https://instagram.com/themicahkatz'
                     target='_blank'
                 >
                     <FiInstagram className='text-secondary-text transition-transform hover:text-primary hover:scale-110' size='2rem' />
                 </a>
                 <a
-                    className='mr-8 animate-fade-in-5'
+                    className='mr-8 animate-fade-in-6'
                     href='https://facebook.com/themicahkatz'
                     target='_blank'
                 >

@@ -6,14 +6,14 @@ const makeAnimationSequenceUtilities = (keyframes, options, sequence) => {
     const animationKeys = [];
 
     Object.keys(keyframes).forEach((keyframeName) => {
-        sequence.forEach((sequent, idx) => {
+        Array.from(Array(options.maxSequences).keys()).forEach((idx) => {
             animationKeys.push(
                 `.animate-${keyframeName}${idx === 0 ? `` : `-${idx + 1}`}`
             );
             animationValues.push({
                 'animation-name': keyframeName,
                 'animation-fill-mode': options.fillMode || '',
-                'animation-delay': sequent,
+                'animation-delay': idx * options.delayMultiple + 's',
                 'animation-timing-function': options.easing,
                 'animation-duration': options.duration || '',
             });
@@ -46,6 +46,25 @@ const makeAnimationDurationUtilities = (animationDurations) => {
     return animationDurationUtilites;
 };
 
+const makeDelayMultipleUtilities = () => {
+    const delayMultipleUtilities = {};
+    const delayKeys = [];
+    const delayValues = [];
+
+    Object.entries(animationDurations).forEach((duration) => {
+        delayKeys.push(`.animation-delay-multiple-${duration[0]}`);
+        delayValues.push({
+            'animation-delay-multiple': duration[1],
+        });
+    });
+
+    delayKeys.forEach((_, idx) => {
+        delayMultipleUtilities[delayKeys[idx]] = delayValues[idx];
+    });
+
+    return delayMultipleUtilities;
+};
+
 module.exports = plugin(function ({ addUtilities, theme }) {
     const options = theme('animationSequence.options', {});
     const sequence = theme('animationSequence.sequence', []);
@@ -59,6 +78,9 @@ module.exports = plugin(function ({ addUtilities, theme }) {
     );
     const animationDurationUtilities =
         makeAnimationDurationUtilities(durations);
+
+    // const animationSequenceUtilities =
+    //     makeDelayMultipleUtilities();
 
     addUtilities(animationUtilities);
     addUtilities(animationDurationUtilities);
