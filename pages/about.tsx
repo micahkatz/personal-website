@@ -28,39 +28,39 @@ const about = (props: Props) => {
             {/* <MoonIcon className='icon' /> */}
             <div className='py-8 flex flex-wrap'>
                 <a
-                    className='mr-8'
+                    className='mr-8 animate-fade-in'
                     href='https://www.linkedin.com/in/micahkatz/'
                     target='_blank'
                 >
-                    <FaLinkedin className='text-secondary-text transition-all hover:text-primary hover:scale-110' size='2rem' />
+                    <FaLinkedin className='text-secondary-text transition-transform hover:text-primary hover:scale-110' size='2rem' />
                 </a>
                 <a
-                    className='mr-8'
+                    className='mr-8 animate-fade-in-2'
                     href='https://www.github.com/micahkatz'
                     target='_blank'
                 >
-                    <FiGithub className='text-secondary-text transition-all hover:text-primary hover:scale-110' size='2rem' />
+                    <FiGithub className='text-secondary-text transition-transform hover:text-primary hover:scale-110' size='2rem' />
                 </a>
                 <a
-                    className='mr-8'
+                    className='mr-8 animate-fade-in-3'
                     href='https://stackoverflow.com/users/8156575/micah-katz'
                     target='_blank'
                 >
-                    <ImStackoverflow className='text-secondary-text transition-all hover:text-primary hover:scale-110' size='2rem' />
+                    <ImStackoverflow className='text-secondary-text transition-transform hover:text-primary hover:scale-110' size='2rem' />
                 </a>
                 <a
-                    className='mr-8'
+                    className='mr-8 animate-fade-in-4'
                     href='https://instagram.com/themicahkatz'
                     target='_blank'
                 >
-                    <FiInstagram className='text-secondary-text transition-all hover:text-primary hover:scale-110' size='2rem' />
+                    <FiInstagram className='text-secondary-text transition-transform hover:text-primary hover:scale-110' size='2rem' />
                 </a>
                 <a
-                    className='mr-8'
+                    className='mr-8 animate-fade-in-5'
                     href='https://facebook.com/themicahkatz'
                     target='_blank'
                 >
-                    <FaFacebook className='text-secondary-text transition-all hover:text-primary hover:scale-110' size='2rem' />
+                    <FaFacebook className='text-secondary-text transition-transform hover:text-primary hover:scale-110' size='2rem' />
                 </a>
             </div>
 

@@ -1,5 +1,6 @@
 import React, { MutableRefObject } from 'react'
 import styles from '../styles/ProjectTile.module.css'
+import useIsInViewport from 'use-is-in-viewport'
 import { FiGithub } from 'react-icons/fi'
 
 type Props = {
@@ -8,13 +9,27 @@ type Props = {
   description: string[];
   skills?: string[];
   githubLink?: string;
+  className?: string;
+  index?: number;
 }
 
 const ProjectTile = (props: Props) => {
+  const targetRef = React.useRef<HTMLDivElement>(null);
 
+  const [isInViewport, wrappedTargetRef] = useIsInViewport({ target: targetRef })
+  const [willShow, setWillShow] = React.useState(false)
+
+  React.useEffect(() => {
+    if (isInViewport) {
+      setWillShow(true)
+    }
+  }, [isInViewport])
   return (
     <div
-      className={`${styles.tileContainer} py-8 px-6 flex flex-col rounded-xl bg-sec-background transition ease-in-out delay-150 hover:-translate-y-2`}
+      ref={wrappedTargetRef}
+      className={`${styles.tileContainer} py-8 px-6 flex flex-col rounded-xl bg-sec-background transition ease-in-out delay-150 hover:-translate-y-2 ${props.className}
+        ${willShow ? `animate-fade-in${props.index !== 0 ? `-${props.index}` : ''}` : ''}`
+      }
     >
       <div className='flex-1'>
         <div className='flex justify-between items-center'>

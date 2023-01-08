@@ -16,6 +16,7 @@ const ProjectsPage = () => {
                     description={['Developed my personal website to create a singular place for all of my information.']}
                     skills={['React.js', 'Next.js', 'TypeScript', 'TailwindCSS', 'Docker', 'Google Cloud']}
                     githubLink='https://github.com/micahkatz/personal-website'
+                    index={0}
                 />
                 <ProjectTile
                     title='Fire Alarm Safety Website'
@@ -23,6 +24,7 @@ const ProjectsPage = () => {
                     description={['Developed a React.js website that displays the current people in the building for a school as a safety measure.']}
                     skills={['React.js', 'Next.js', 'TypeScript']}
                     githubLink='https://github.com/micahkatz/epstein-rfid-ui'
+                    index={1}
                 />
                 <ProjectTile
                     title='Social Media App (Personal Project)'
@@ -32,12 +34,14 @@ const ProjectsPage = () => {
                         // 'Added login/signup, recording/uploading videos, liking posts, following friends, and notifications.'
                     ]}
                     skills={['React Native', 'Expo', 'AWS']}
+                    index={2}
                 />
                 <ProjectTile
                     title='Image Transformation Discord Bot (Personal Project)'
                     dates='Feb 2022 – Present'
                     description={['Worked with the Cloudinary API to perform image transformations on demand for discord servers. I also Implemented a chaining system where users can chain multiple image transformations into one command.']}
                     skills={['Node.js', 'Discord API', 'Cloudinary API']}
+                    index={3}
                 />
                 <ProjectTile
                     title='Arduino Garage Door Scanner System'
@@ -45,6 +49,7 @@ const ProjectsPage = () => {
                     description={['Designed a system for an organization in Massachusetts that required an RFID card to enter. It processes over 50 cards (one per person) and stores logs on a SD card. It will trigger a garage door to open using Arduino relay switches.']}
                     skills={['Arduino']}
                     githubLink='https://github.com/micahkatz/GarageDoorRFID'
+                    index={4}
                 />
                 <ProjectTile
                     title='Summer Camp Mealtimes Website (Personal Project)'
@@ -52,6 +57,7 @@ const ProjectsPage = () => {
                     description={['Built a simple website for a summer camp (6 Points Sci-Tech Academy in Mass.) that displayed the status of an AWS database – to help regulate camper meal times. This was shown on TVs in the cafeteria and included an admin dashboard and announcement features.']}
                     skills={['React.js', 'AWS']}
                     githubLink='https://github.com/micahkatz/Sci-Tech-Queue-Website'
+                    index={5}
                 />
             </div>
         </Section>

@@ -66,32 +66,26 @@ const NavBar = (props: Props) => {
     // const [prevScrollPos, setPrevScrollPos] = React.useState(0)
 
     React.useEffect(() => {
-        setIsVisible(scrollDirection === 'down')
+        scrollDirection && setIsVisible(scrollDirection === 'down')
     }, [scrollDirection])
-
-
-
 
     return (
         <div className={`bg-primary-background flex flex-row pt-8 flex-1 justify-between sticky top-0 pb-4 z-20 transition-all delay-250 duration-500 
-            ${isVisible ? 'translate-y-0 opacity-1' : '-translate-y-4 opacity-0'}
+            ${isVisible ? 'translate-y-0' : '-translate-y-32'}
         `}>
             {/* <span className='text-primary-text'>MK</span> */}
             <div className='flex flex-1'>
                 <img src='logo.png' className='w-14 object-contain' />
             </div>
-            {
-                isNotMobile &&
-                <div className='flex items-center'>
-                    <Link className='text-primary-text mr-4 hover:text-primary' href='#about'>About</Link>
-                    <Link className='text-primary-text mr-4 hover:text-primary' href='#projects'>Projects</Link>
-                    <Link className='text-primary-text mr-4 hover:text-primary' href='#experience'>Experience</Link>
-                    {/* <Link className='text-primary-text mr-4 hover:text-primary' href='#skills'>Skills</Link> */}
-                    <Link className='text-primary-text mr-4 hover:text-primary' href='mailto:micahj2110@gmail.com'>Contact</Link>
-                    {/* <Link className='text-primary-text mr-4 hover:text-primary' href='#contact'>Contact</Link> */}
-                    <Link className='text-primary-text mr-4 hover:text-primary px-4 py-3 border rounded-lg border-primary-text hover:border-primary' href='micah-resume.pdf'>Resume</Link>
-                </div>
-            }
+            <div className='hidden md:flex items-center'>
+                <Link className='text-primary-text mr-4 hover:text-primary' href='/'>About</Link>
+                <Link className='text-primary-text mr-4 hover:text-primary' href='#projects'>Projects</Link>
+                <Link className='text-primary-text mr-4 hover:text-primary' href='#experience'>Experience</Link>
+                {/* <Link className='text-primary-text mr-4 hover:text-primary' href='#skills'>Skills</Link> */}
+                <Link className='text-primary-text mr-4 hover:text-primary' href='mailto:micahj2110@gmail.com'>Contact</Link>
+                {/* <Link className='text-primary-text mr-4 hover:text-primary' href='#contact'>Contact</Link> */}
+                <Link className='text-primary-text mr-4 hover:text-primary px-4 py-3 border rounded-lg border-primary-text hover:border-primary' href='micah-resume.pdf'>Resume</Link>
+            </div>
         </div>
     )
 }

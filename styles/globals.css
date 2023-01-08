@@ -10,8 +10,8 @@ body {
 scroll-behavior: smooth!important;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-
-    background: var(--background-primary);
+    background-color: rgb(37, 40, 61);
+    /* background: var(--background-primary); */
 }
 
 a {
