@@ -13,6 +13,22 @@ scroll-behavior: smooth!important;
     background-color: rgb(37, 40, 61);
     /* background: var(--background-primary); */
 }
+body::-webkit-scrollbar {
+  width: .75rem;
+  /* border: 16px solid rgba(255,255,255,0); */
+  
+}
+
+body::-webkit-scrollbar-thumb {
+  /* border: 0.5em solid rgba(0, 0, 0, 0);  Transparent border together with `background-clip: padding-box` does the trick */
+  /* background: var(--background-sec); */
+  box-shadow: inset 0 0 10px 2px var(--color-primary);
+  border: solid 3px transparent;
+  background-clip: padding-box;
+  /* background: var(--color-primary); */
+  border-radius: 10px;
+
+}
 
 a {
   color: inherit;
