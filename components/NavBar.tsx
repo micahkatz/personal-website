@@ -74,9 +74,9 @@ const NavBar = (props: Props) => {
             ${isVisible ? 'translate-y-0' : '-translate-y-32'}
         `}>
             {/* <span className='text-primary-text'>MK</span> */}
-            <div className='flex flex-1'>
+            <Link className='flex flex-1' href='/'>
                 <img src='logo.png' className='w-14 object-contain' />
-            </div>
+            </Link>
             <div className='hidden md:flex items-center'>
                 <Link className='text-primary-text mr-4 hover:text-primary' href='/'>About</Link>
                 <Link className='text-primary-text mr-4 hover:text-primary' href='#projects'>Projects</Link>

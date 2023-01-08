@@ -20,14 +20,14 @@ const Section = (props: Props) => {
     }, [isInViewport])
 
     return (
-        <div
+        <section
             ref={wrappedTargetRef}
-            className={`mb-16 ${props.className} ${willShow ? 'animate-fade' : 'opacity-0'}`}
+            className={`${props.className} ${willShow ? 'animate-fade' : 'opacity-0'} py-16`}
             id={props.id}
         >
             <h1 className='text-primary-text text-3xl font-semibold mb-8'>{props.title}</h1>
             {props.children}
-        </div>
+        </section>
     )
 }
 
