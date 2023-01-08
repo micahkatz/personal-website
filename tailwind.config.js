@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
     content: [
         './pages/**/*.{js,ts,jsx,tsx}',
@@ -6,6 +8,10 @@ module.exports = {
     ],
     darkMode: 'class',
     theme: {
+        screens: {
+            xs: '300px',
+            ...defaultTheme.screens,
+        },
         extend: {
             colors: {
                 primary: 'var(--color-primary)',
@@ -65,7 +71,7 @@ module.exports = {
         // Animation sequencing plugin options
         animationSequence: {
             // Utility will be generated using the [index + 1] of these delay values
-            sequence: ['0s', '.5s', '1s', '1.5s', '2s', '2.5s'],
+            // sequence: ['0s', '.5s', '1s', '1.5s', '2s', '2.5s'],
             options: {
                 delayMultiple: 0.5,
                 maxSequences: 10,

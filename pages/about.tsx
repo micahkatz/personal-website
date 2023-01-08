@@ -16,9 +16,9 @@ const about = (props: Props) => {
             <h3 className={'text-md md: text-lg font-bold text-primary-text mb-4'}>
                 Hi, my name is
             </h3>
-            <h1 className={'text-6xl md:text-8xl font-bold text-primary-text mb-2'}>
+            <h2 className={'text-6xl md:text-8xl font-bold text-primary-text mb-2'}>
                 Micah Katz
-            </h1>
+            </h2>
             <h1 className={'text-3xl md:text-4xl font-bold text-primary mb-6'}>
                 Software Developer Intern @ IBM
             </h1>
@@ -26,7 +26,7 @@ const about = (props: Props) => {
                 I am primarily experienced in React.js and React-Native, with background in Express, NodeJS, Docker, and TypeScript
             </p>
             {/* <MoonIcon className='icon' /> */}
-            <div className='py-8 flex flex-wrap'>
+            <div className='py-8 grid grid-cols-6 max-xs:grid-cols-3 md:flex md:flex-wrap'>
                 <a
                     className='mr-8 mb-4 animate-fade-in'
                     href='https://www.linkedin.com/in/micahkatz/'

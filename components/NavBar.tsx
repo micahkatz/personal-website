@@ -70,7 +70,7 @@ const NavBar = (props: Props) => {
     }, [scrollDirection])
 
     return (
-        <div className={`bg-primary-background flex flex-row pt-8 flex-1 justify-between sticky top-0 pb-4 z-20 transition-all delay-250 duration-500 
+        <div className={`bg-primary-background flex flex-row pt-8 flex-1 justify-between sticky top-0 pb-4 z-20 transition-all delay-250 duration-500
             ${isVisible ? 'translate-y-0' : '-translate-y-32'}
         `}>
             {/* <span className='text-primary-text'>MK</span> */}

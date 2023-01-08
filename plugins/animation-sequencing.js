@@ -46,25 +46,6 @@ const makeAnimationDurationUtilities = (animationDurations) => {
     return animationDurationUtilites;
 };
 
-const makeDelayMultipleUtilities = () => {
-    const delayMultipleUtilities = {};
-    const delayKeys = [];
-    const delayValues = [];
-
-    Object.entries(animationDurations).forEach((duration) => {
-        delayKeys.push(`.animation-delay-multiple-${duration[0]}`);
-        delayValues.push({
-            'animation-delay-multiple': duration[1],
-        });
-    });
-
-    delayKeys.forEach((_, idx) => {
-        delayMultipleUtilities[delayKeys[idx]] = delayValues[idx];
-    });
-
-    return delayMultipleUtilities;
-};
-
 module.exports = plugin(function ({ addUtilities, theme }) {
     const options = theme('animationSequence.options', {});
     const sequence = theme('animationSequence.sequence', []);
@@ -78,9 +59,6 @@ module.exports = plugin(function ({ addUtilities, theme }) {
     );
     const animationDurationUtilities =
         makeAnimationDurationUtilities(durations);
-
-    // const animationSequenceUtilities =
-    //     makeDelayMultipleUtilities();
 
     addUtilities(animationUtilities);
     addUtilities(animationDurationUtilities);
