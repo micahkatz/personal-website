@@ -10,7 +10,7 @@ const about = (props: Props) => {
     return (
         <div
             id='about'
-            className={`${styles.aboutSection} align-center justify-center animate-fade pt-32`}
+            className={`${styles.aboutSection} align-center justify-center animate-fade`}
         >
 
             <h3 className={'text-md md: text-lg font-bold text-primary-text mb-4'}>
