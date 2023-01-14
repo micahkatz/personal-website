@@ -25,18 +25,15 @@ const VScodeGuide = (props: Props) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
+            <NavBar />
             <main
                 className={`${styles.main} px-8 md:px-20 scroll-smooth`}
-
-            // style={generateJSXMeshGradient(6)}
-            // style=""
             >
-                <NavBar />
                 <div className='flex flex-col items-center flex-1 w-full'>
 
                     <ReadmeParser
                         readmeUrl='https://raw.githubusercontent.com/micahkatz/micahs-vscode-guide/main/README.md'
-                        className={`${styles.article} max-w-4xl animate-slide-up`}
+                        className={`${styles.article} max-w-4xl animate-slide-up pt-8`}
                     // getLineClassName={index => `animate-fade-in${index !== 0 ? '-' + (index + 1) : ''}`}
                     />
                 </div>
