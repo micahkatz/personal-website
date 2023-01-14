@@ -65,30 +65,49 @@ const NavBar = (props: Props) => {
     const { scrollX, scrollY, scrollDirection } = useScroll();
     const isNotMobile = useBetterMediaQuery('(min-width: 768px)')
     const [isVisible, setIsVisible] = React.useState(true)
+    const [isMenuVisible, setIsMenuVisible] = React.useState(false)
     // const [prevScrollPos, setPrevScrollPos] = React.useState(0)
 
     React.useEffect(() => {
         scrollDirection && setIsVisible(scrollDirection === 'down')
+        scrollDirection !== 'down' && setIsMenuVisible(false)
     }, [scrollDirection])
 
     return (
-        <div className={`bg-primary-background flex flex-row pt-8 flex-1 justify-between sticky top-0 pb-4 z-20 transition-all delay-250 duration-500
+        <div className={`bg-primary-background pt-8  sticky top-0 pb-4 z-20 transition-all delay-250 duration-500
             ${isVisible ? 'translate-y-0' : '-translate-y-32'}
         `}>
             {/* <span className='text-primary-text'>MK</span> */}
-            <Link className='flex flex-1' href='/'>
-                <Image src='/logo.png' className='w-14 object-contain' alt='Micah Katz' width={100} height={100} />
-            </Link>
-            <div className='hidden md:flex items-center'>
-                <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down' href='/'>About</Link>
-                <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-2' href='#projects'>Projects</Link>
-                <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-3' href='#experience'>Experience</Link>
-                <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-4' href='mailto:micahj2110@gmail.com'>Contact</Link>
-                <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-5 px-4 py-3 border rounded-lg border-primary-text hover:border-primary' href='micah-resume.pdf'>Resume</Link>
+            <div className='flex flex-row flex-1 justify-between'>
+                <Link className={`transition-opacity duration-500`} href='/'>
+                    <Image src='/logo.png' className='w-14 object-contain' alt='Micah Katz' width={100} height={100} />
+                </Link>
+                <div className='hidden md:flex items-center'>
+                    <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down' href='/'>About</Link>
+                    <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-2' href='/#projects'>Projects</Link>
+                    <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-3' href='/#experience'>Experience</Link>
+                    <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-4' href='mailto:micahj2110@gmail.com'>Contact</Link>
+                    <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-5 px-4 py-3 border rounded-lg border-primary-text hover:border-primary' href='micah-resume.pdf'>Resume</Link>
+                </div>
+                <div className={'flex flex-col items-end'}>
+                    <div className={`flex flex-col p-4 rounded-lg transition-all ${isMenuVisible ? 'bg-sec-background md:bg-transparent' : ''}`}>
+                        <button className='visible md:hidden self-end' onClick={() => setIsMenuVisible(prev => !prev)}>
+                            <RiMenu4Line className='text-secondary-text transition-transform hover:text-primary hover:scale-110' size='2rem' />
+                        </button>
+                        {
+                            isMenuVisible && (
+                                <div className='md:hidden flex flex-col pr-8 pl-4'>
+                                    <Link className='text-primary-text text-xl mb-4 hover:text-primary animate-slide-down' href='/'>About</Link>
+                                    <Link className='text-primary-text text-xl mb-4 hover:text-primary animate-slide-down-2' href='/#projects'>Projects</Link>
+                                    <Link className='text-primary-text text-xl mb-4 hover:text-primary animate-slide-down-3' href='/#experience'>Experience</Link>
+                                    <Link className='text-primary-text text-xl mb-4 hover:text-primary animate-slide-down-4' href='mailto:micahj2110@gmail.com'>Contact</Link>
+                                    <Link className='text-primary-text text-xl mb-4 hover:text-primary animate-slide-down-5 px-4 py-3 border rounded-lg border-primary-text hover:border-primary' href='micah-resume.pdf'>Resume</Link>
+                                </div>
+                            )
+                        }
+                    </div>
+                </div>
             </div>
-            {/* <button className='visible md:hidden'>
-                <RiMenu4Line className='text-secondary-text transition-transform hover:text-primary hover:scale-110' size='2rem' />
-            </button> */}
         </div>
     )
 }
