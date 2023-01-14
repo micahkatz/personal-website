@@ -10,7 +10,7 @@ import Footer from '../../components/Footer'
 
 type Props = {}
 
-const VScodeGuide = (props: Props) => {
+const MacTerminalPreferences = (props: Props) => {
     const [theme, setTheme] = React.useState(DARK_THEME);
 
     React.useEffect(() => {
@@ -20,8 +20,8 @@ const VScodeGuide = (props: Props) => {
 
         <div className={`${styles.container} bg-primary-background flex-1 scroll-smooth`}>
             <Head>
-                <title className='text-lg text-primary-text'>Micah's VS Code Guide</title>
-                <meta name="description" content="My guide on maximizing efficiency with my favorite code editor – VSCode" />
+                <title className='text-lg text-primary-text'>Mac Terminal Preferences</title>
+                <meta name="description" content="My guide to setting up your terminal on Mac to look as good as ever. Includes autocomplete, syntax highlighting, and getting rid of as much white text as possible😎" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
@@ -32,7 +32,7 @@ const VScodeGuide = (props: Props) => {
                 <div className='flex flex-col items-center flex-1 w-full'>
 
                     <ReadmeParser
-                        readmeUrl='https://raw.githubusercontent.com/micahkatz/micahs-vscode-guide/main/README.md'
+                        readmeUrl='https://raw.githubusercontent.com/micahkatz/mac-terminal-preferences/main/README.md'
                         className={`${styles.article} max-w-4xl animate-slide-up pt-8`}
                     />
                 </div>
@@ -42,4 +42,4 @@ const VScodeGuide = (props: Props) => {
     )
 }
 
-export default VScodeGuide
+export default MacTerminalPreferences
