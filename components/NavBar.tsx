@@ -3,8 +3,10 @@ import { useMediaQuery } from 'usehooks-ts'
 import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
 import { useSsr } from 'usehooks-ts'
+import { RiMenu4Line } from 'react-icons/ri'
 import styles from 'styles/NavBar.module.css'
 import LogoImg from '../assets/logo.png'
+import Image from 'next/image'
 
 type Props = {}
 
@@ -75,7 +77,7 @@ const NavBar = (props: Props) => {
         `}>
             {/* <span className='text-primary-text'>MK</span> */}
             <Link className='flex flex-1' href='/'>
-                <img src='logo.png' className='w-14 object-contain' />
+                <Image src='/logo.png' className='w-14 object-contain' alt='Micah Katz' width={100} height={100} />
             </Link>
             <div className='hidden md:flex items-center'>
                 <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down' href='/'>About</Link>
@@ -84,6 +86,9 @@ const NavBar = (props: Props) => {
                 <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-4' href='mailto:micahj2110@gmail.com'>Contact</Link>
                 <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-5 px-4 py-3 border rounded-lg border-primary-text hover:border-primary' href='micah-resume.pdf'>Resume</Link>
             </div>
+            {/* <button className='visible md:hidden'>
+                <RiMenu4Line className='text-secondary-text transition-transform hover:text-primary hover:scale-110' size='2rem' />
+            </button> */}
         </div>
     )
 }

@@ -1,19 +1,13 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { monitorEventLoopDelay } from 'perf_hooks'
 import React from 'react'
-import ProjectTile from '../components/ProjectTile'
-import styles from '../styles/HomePage.module.css'
-import { DEFAULT_THEME, DARK_THEME } from '../themes';
-import { applyTheme } from '../themes/utils';
-import ProjectsPage from './projects'
-import MoonIcon from 'assets/moon.svg'
-import { generateJSXMeshGradient } from "meshgrad";
-import NavBar from '../components/NavBar'
-import ExperiencePage from './experience';
-import AboutPage from './about';
-import ContactPage from './contact';
 import Footer from '../components/Footer'
+import NavBar from '../components/NavBar'
+import styles from '../styles/HomePage.module.css'
+import { DARK_THEME } from '../themes'
+import { applyTheme } from '../themes/utils'
+import AboutPage from './about'
+import ExperiencePage from './experience'
+import ProjectsPage from './projects'
 export default function Home() {
   const [theme, setTheme] = React.useState(DARK_THEME);
 

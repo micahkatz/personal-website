@@ -1,0 +1,48 @@
+.article {
+    color: var(--color-text-primary);
+    line-height: 1.5;
+}
+
+.article h1 {
+    color: var(--color-text-primary);
+    font-size: 2.5rem;
+    font-weight: bold;
+    border-bottom: 1px solid var(--background-sec);
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.article h3 {
+    color: var(--color-text-primary);
+    font-size: 1.25rem;
+    /* font-weight: bold; */
+}
+
+.article a {
+    color: var(--color-primary);
+}
+
+.article a:hover {
+    text-decoration: underline;
+}
+
+.article ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    line-height: 1.5;
+}
+.article ol {
+    line-height: 1.5;
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+.article li {
+    margin-top: 0.25em;
+}
+
+.article code {
+    background-color: var(--background-sec);
+    border-radius: 6px;
+    padding: 0.1em 0.4em;
+}
