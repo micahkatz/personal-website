@@ -104,12 +104,12 @@ const NavBar = (props: Props) => {
                         </button>
                         {
                             isMenuVisible && (
-                                <div className='md:hidden flex flex-col pr-8 pl-4'>
-                                    <Link className='text-primary-text text-xl mb-4 hover:text-primary animate-slide-down' href='/'>About</Link>
-                                    <Link className='text-primary-text text-xl mb-4 hover:text-primary animate-slide-down-2' href='/#projects'>Projects</Link>
-                                    <Link className='text-primary-text text-xl mb-4 hover:text-primary animate-slide-down-3' href='/#experience'>Experience</Link>
-                                    <Link className='text-primary-text text-xl mb-4 hover:text-primary animate-slide-down-4' href='mailto:micahj2110@gmail.com'>Contact</Link>
-                                    <Link className='text-primary-text text-xl mb-4 hover:text-primary animate-slide-down-5 px-4 py-3 border rounded-lg border-primary-text hover:border-primary' href='micah-resume.pdf'>Resume</Link>
+                                <div className='md:hidden flex flex-col pr-8 pl-4 animate-fade'>
+                                    <Link className='text-primary-text text-xl mb-4 hover:text-primary' href='/'>About</Link>
+                                    <Link className='text-primary-text text-xl mb-4 hover:text-primary' href='/#projects'>Projects</Link>
+                                    <Link className='text-primary-text text-xl mb-4 hover:text-primary' href='/#experience'>Experience</Link>
+                                    <Link className='text-primary-text text-xl mb-4 hover:text-primary' href='mailto:micahj2110@gmail.com'>Contact</Link>
+                                    <Link className='text-primary-text text-xl mb-4 hover:text-primary px-4 py-3 border rounded-lg border-primary-text hover:border-primary' href='micah-resume.pdf'>Resume</Link>
                                 </div>
                             )
                         }
