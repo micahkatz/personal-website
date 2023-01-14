@@ -3,7 +3,7 @@ import { useMediaQuery } from 'usehooks-ts'
 import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
 import { useSsr } from 'usehooks-ts'
-import { RiMenu4Line } from 'react-icons/ri'
+import { RiMenu4Line, RiCloseFill } from 'react-icons/ri'
 import styles from 'styles/NavBar.module.css'
 import LogoImg from '../assets/logo.png'
 import Image from 'next/image'
@@ -74,7 +74,7 @@ const NavBar = (props: Props) => {
     }, [scrollDirection])
 
     return (
-        <div className={`bg-primary-background pt-8  sticky top-0 pb-4 z-20 transition-all delay-250 duration-500
+        <div className={`bg-primary-background pt-8 sticky top-0 pb-4 z-20 transition-all delay-250 duration-500 drop-shadow-md px-8 md:px-20
             ${isVisible ? 'translate-y-0' : '-translate-y-32'}
         `}>
             {/* <span className='text-primary-text'>MK</span> */}
@@ -89,10 +89,18 @@ const NavBar = (props: Props) => {
                     <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-4' href='mailto:micahj2110@gmail.com'>Contact</Link>
                     <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-5 px-4 py-3 border rounded-lg border-primary-text hover:border-primary' href='micah-resume.pdf'>Resume</Link>
                 </div>
-                <div className={'md:hidden flex flex-col items-end'}>
-                    <div className={`flex flex-col p-4 rounded-lg transition-all ${isMenuVisible ? 'bg-sec-background md:bg-transparent' : ''}`}>
+                <div className={`md:hidden flex flex-col items-end`}>
+                    <div className={`flex flex-col p-4 rounded-lg transition-colors
+                                    ${isMenuVisible ? 'bg-sec-background md:bg-transparent'
+                            : ''}`
+                    }>
                         <button className='visible md:hidden self-end' onClick={() => setIsMenuVisible(prev => !prev)}>
-                            <RiMenu4Line className='text-secondary-text transition-transform hover:text-primary hover:scale-110' size='2rem' />
+                            {isMenuVisible ? (
+                                <RiCloseFill className='text-secondary-text transition-transform hover:text-primary hover:scale-110' size='2rem' />
+                            ) : (
+
+                                <RiMenu4Line className={'text-secondary-text transition-transform hover:text-primary hover:scale-110'} size='2rem' />
+                            )}
                         </button>
                         {
                             isMenuVisible && (

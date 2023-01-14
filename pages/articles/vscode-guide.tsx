@@ -36,8 +36,8 @@ const VScodeGuide = (props: Props) => {
 
                     <ReadmeParser
                         readmeUrl='https://raw.githubusercontent.com/micahkatz/micahs-vscode-guide/main/README.md'
-                        githubRawUrl='https://github.com/micahkatz/micahs-vscode-guide/raw/main'
-                        className={`${styles.article} max-w-4xl`}
+                        className={`${styles.article} max-w-4xl animate-slide-up`}
+                    // getLineClassName={index => `animate-fade-in${index !== 0 ? '-' + (index + 1) : ''}`}
                     />
                 </div>
                 <Footer />

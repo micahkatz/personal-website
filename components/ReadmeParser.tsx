@@ -9,13 +9,13 @@ type Props = {
     readmeUrl: string;
     githubRawUrl?: string;
     className?: string;
+    getLineClassName?: (index: number) => string;
+    loadingText?: string;
 }
 
 const ReadmeParser = (props: Props) => {
     const [articleContent, setArticleContent] = React.useState<string | null>(null)
     const articleLines = articleContent?.split('\n')
-    // const articleLines = formatArticle();
-    // const [codeBlockStartIndex, setCodeBlockStartIndex] = React.useState<number>(-1)
 
     const getMarkdown = async () => {
         try {
@@ -42,6 +42,7 @@ const ReadmeParser = (props: Props) => {
                         return line ? (
                             <ReactMarkdown
                                 rehypePlugins={[rehypeRaw]}
+                                className={`${props.getLineClassName ? props.getLineClassName(index) : ''}`}
                             >
                                 {line}
                             </ReactMarkdown>
@@ -50,7 +51,11 @@ const ReadmeParser = (props: Props) => {
                     )}
                 </>
             ) : (
-                <ReactMarkdown># Loading...</ReactMarkdown>
+                props.loadingText ? (
+                    <ReactMarkdown># Loading...</ReactMarkdown>
+                ) : (
+                    <div className='h-screen' />
+                )
             )}
         </article>
     )

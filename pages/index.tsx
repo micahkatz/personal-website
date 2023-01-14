@@ -25,13 +25,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+
+      <NavBar />
       <main
         className={`${styles.main} px-8 md:px-20 scroll-smooth`}
 
       // style={generateJSXMeshGradient(6)}
       // style=""
       >
-        <NavBar />
         <AboutPage />
         <ProjectsPage />
         <ExperiencePage />
