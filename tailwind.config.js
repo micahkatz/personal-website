@@ -10,6 +10,7 @@ module.exports = {
     theme: {
         screens: {
             xs: '300px',
+            'web-hover': { raw: '(hover: hover)' },
             ...defaultTheme.screens,
         },
         extend: {

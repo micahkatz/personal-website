@@ -89,7 +89,7 @@ const NavBar = (props: Props) => {
                     <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-4' href='mailto:micahj2110@gmail.com'>Contact</Link>
                     <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-5 px-4 py-3 border rounded-lg border-primary-text hover:border-primary' href='micah-resume.pdf'>Resume</Link>
                 </div>
-                <div className={'flex flex-col items-end'}>
+                <div className={'md:hidden flex flex-col items-end'}>
                     <div className={`flex flex-col p-4 rounded-lg transition-all ${isMenuVisible ? 'bg-sec-background md:bg-transparent' : ''}`}>
                         <button className='visible md:hidden self-end' onClick={() => setIsMenuVisible(prev => !prev)}>
                             <RiMenu4Line className='text-secondary-text transition-transform hover:text-primary hover:scale-110' size='2rem' />
