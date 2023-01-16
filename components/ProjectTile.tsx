@@ -2,13 +2,16 @@ import React, { MutableRefObject } from 'react'
 import styles from '../styles/ProjectTile.module.css'
 import useIsInViewport from 'use-is-in-viewport'
 import { FiGithub } from 'react-icons/fi'
+import { GrArticle } from 'react-icons/gr'
+import { MdOutlineArticle } from 'react-icons/md'
 
 type Props = {
   title: string;
-  dates: string;
+  dates?: string;
   description: string[];
   skills?: string[];
   githubLink?: string;
+  articleLink?: string;
   className?: string;
   index?: number;
 }
@@ -27,25 +30,34 @@ const ProjectTile = (props: Props) => {
   return (
     <div
       ref={wrappedTargetRef}
-      className={`${styles.tileContainer} py-8 px-6 flex flex-col rounded-xl bg-sec-background transition ease-in-out delay-150 hover:-translate-y-2 ${props.className}
+      className={`${styles.tileContainer} py-8 px-6 flex flex-col rounded-xl bg-sec-background transition ease-in-out delay-150 ${props.className}
         ${willShow ? `animate-fade-in${props.index !== 0 ? `-${props.index}` : ''}` : ''}`
       }
     >
       <div className='flex-1'>
         <div className='flex justify-between items-center'>
           <div>
-            <h2 className='title font-bold text-primary-text'>{props.title}</h2>
-            <h2 className='text-sm font-medium text-secondary-text pb-1'>{props.dates}</h2>
+            <h2 className='title font-bold text-primary-text mb-2'>{props.title}</h2>
+            {/* <h2 className='text-sm font-medium text-secondary-text pb-1'>{props.dates}</h2> */}
           </div>
-          {props.githubLink && (
-            <a
-              href={props.githubLink}
-              target='_blank'
-            >
+          <div className='flex gap-4'>
+            {props.articleLink && (
+              <a
+                href={props.articleLink}
+              >
 
-              <FiGithub className='text-secondary-text' size='1.5rem' />
-            </a>
-          )}
+                <MdOutlineArticle className='text-secondary-text transition-transform hover:text-primary hover:scale-110' size='1.5rem' />
+              </a>
+            )}
+            {props.githubLink && (
+              <a
+                href={props.githubLink}
+                target='_blank'
+              >
+                <FiGithub className='text-secondary-text transition-transform hover:text-primary hover:scale-110' size='1.5rem' />
+              </a>
+            )}
+          </div>
         </div>
         {props.description.length > 1 ? (
           <ul className='list-disc font-light text-secondary-text pl-4 py-4'>
