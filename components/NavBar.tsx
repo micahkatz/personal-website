@@ -7,6 +7,7 @@ import { RiMenu4Line, RiCloseFill } from 'react-icons/ri'
 import styles from 'styles/NavBar.module.css'
 import LogoImg from '../assets/logo.png'
 import Image from 'next/image'
+import { event } from 'nextjs-google-analytics'
 
 type Props = {}
 
@@ -73,6 +74,13 @@ const NavBar = (props: Props) => {
         scrollDirection !== 'down' && setIsMenuVisible(false)
     }, [scrollDirection])
 
+    const clickResume = () => {
+        event("click_resume", {
+            category: "Resume",
+            label: "Someone opened your resume",
+        });
+
+    }
     return (
         <div className={`bg-primary-background pt-8 sticky top-0 pb-4 z-20 transition-all delay-250 duration-500 drop-shadow-md px-8 md:px-20
             ${isVisible ? 'translate-y-0' : '-translate-y-32'}
@@ -87,7 +95,7 @@ const NavBar = (props: Props) => {
                     <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-2' href='/#projects'>Projects</Link>
                     <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-3' href='/#experience'>Experience</Link>
                     <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-4' href='mailto:micahj2110@gmail.com'>Contact</Link>
-                    <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-5 px-4 py-3 border rounded-lg border-primary-text hover:border-primary' href='micah-resume.pdf'>Resume</Link>
+                    <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-5 px-4 py-3 border rounded-lg border-primary-text hover:border-primary' onClick={clickResume} href='/micah-resume.pdf'>Resume</Link>
                 </div>
                 <div className={`md:hidden flex flex-col items-end`}>
                     <div className={`flex flex-col p-4 rounded-lg transition-colors
