@@ -26,7 +26,7 @@ const about = (props: Props) => {
                 I am primarily experienced in React.js and React-Native, with background in Express, NodeJS, Docker, and TypeScript
             </p>
             {/* <MoonIcon className='icon' /> */}
-            <div className='py-8 grid grid-cols-6 max-xs:grid-cols-3 md:flex md:flex-wrap'>
+            <div className='grid py-8  grid-cols-6 max-xs:grid-cols-3 md:flex md:flex-wrap'>
                 <a
                     className='mr-8 mb-4 animate-fade-in'
                     href='https://www.linkedin.com/in/micahkatz/'
