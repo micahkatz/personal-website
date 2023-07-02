@@ -95,7 +95,7 @@ const NavBar = (props: Props) => {
                     <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-2' href='/#projects'>Projects</Link>
                     <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-3' href='/#experience'>Experience</Link>
                     <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-4' href='mailto:micahj2110@gmail.com'>Contact</Link>
-                    <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-5 px-4 py-3 border rounded-lg border-primary-text hover:border-primary' onClick={clickResume} href='/micah-resume.pdf'>Resume</Link>
+                    <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-5 px-4 py-3 border rounded-lg border-primary-text hover:border-primary' onClick={clickResume} href='/resume'>Resume</Link>
                 </div>
                 <div className={`md:hidden flex flex-col items-end`}>
                     <div className={`flex flex-col p-4 rounded-lg transition-colors
@@ -117,7 +117,7 @@ const NavBar = (props: Props) => {
                                     <Link className='text-primary-text text-xl mb-4 hover:text-primary' href='/#projects'>Projects</Link>
                                     <Link className='text-primary-text text-xl mb-4 hover:text-primary' href='/#experience'>Experience</Link>
                                     <Link className='text-primary-text text-xl mb-4 hover:text-primary' href='mailto:micahj2110@gmail.com'>Contact</Link>
-                                    <Link className='text-primary-text text-xl mb-4 hover:text-primary px-4 py-3 border rounded-lg border-primary-text hover:border-primary' href='micah-resume.pdf'>Resume</Link>
+                                    <Link className='text-primary-text text-xl mb-4 hover:text-primary px-4 py-3 border rounded-lg border-primary-text hover:border-primary' href='/resume'>Resume</Link>
                                 </div>
                             )
                         }
