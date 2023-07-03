@@ -57,10 +57,7 @@ module.exports = plugin(function ({ addUtilities, theme }) {
     options,
     sequence
   );
-
-  console.log({ animationUtilities });
   const animationDurationUtilities = makeAnimationDurationUtilities(durations);
-  console.log({ animationDurationUtilities });
 
   addUtilities(animationUtilities);
   addUtilities(animationDurationUtilities);

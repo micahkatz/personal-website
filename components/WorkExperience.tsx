@@ -11,7 +11,7 @@ type Props = {
 
 const WorkExperience = (props: Props) => {
   return (
-    <div className={`py-4 px-4 flex flex-col rounded-xl`}>
+    <div className={`py-4 px-4 flex flex-col rounded-xl animate-fade-in transition-all`}>
       <div className='flex-1'>
         <div className='flex'>
           <span className='title font-bold text-primary-text text-lg'>

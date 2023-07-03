@@ -38,6 +38,7 @@ const experience = (props: Props) => {
         switch (selectedCompany) {
             case 'IBM':
                 return <WorkExperience
+                    key={selectedCompany}
                     company={selectedCompany}
                     position='Full-Stack Developer'
                     dates='June 2021 - May 2023'
@@ -50,6 +51,7 @@ const experience = (props: Props) => {
                 />
             case 'JamFeed':
                 return <WorkExperience
+                    key={selectedCompany}
                     company={selectedCompany}
                     position='Front-End React-Native Mobile App Engineer'
                     dates='June 2020 - May 2021'
@@ -63,6 +65,7 @@ const experience = (props: Props) => {
                 />
             case '6 Points Sci-Tech Academy':
                 return <WorkExperience
+                    key={selectedCompany}
                     company={selectedCompany}
                     position='Camp Counselor and Specialist'
                     dates='Jun 2019 - Aug 2020'
@@ -74,6 +77,7 @@ const experience = (props: Props) => {
                 />
             case 'Anubis LLC':
                 return <WorkExperience
+                    key={selectedCompany}
                     company={selectedCompany}
                     position='Founding Software Developer'
                     dates='Jan 2016 – May 2019'
@@ -83,6 +87,7 @@ const experience = (props: Props) => {
                 />
             default:
                 return <WorkExperience
+                    key={selectedCompany}
                     company={'unknown'}
                     position='unknown'
                     dates='unknown'

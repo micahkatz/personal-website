@@ -1,19 +1,24 @@
 import React, { MutableRefObject } from 'react'
 import styles from '../styles/ProjectTile.module.css'
 import useIsInViewport from 'use-is-in-viewport'
-import { FiGithub } from 'react-icons/fi'
+import { FiGithub, FiExternalLink } from 'react-icons/fi'
 import { GrArticle } from 'react-icons/gr'
 import { MdOutlineArticle } from 'react-icons/md'
 
+type MonthType = 'Jan' | 'Feb' | 'Mar' | 'Apr' | 'May' | 'Jun' | 'Jul' | 'Aug' | 'Sep' | 'Oct' | 'Nov' | 'Dec'
+type YearType = `${number}`
+
+type DateType = `${MonthType} ${YearType}` | 'Present'
+
 type Props = {
   title: string;
-  dates?: string;
+  dates?: `${DateType} - ${DateType}`;
   description: string[];
   skills?: string[];
   githubLink?: string;
+  publishedLink?: string;
   articleLink?: string;
   className?: string;
-  index?: number;
 }
 
 const ProjectTile = (props: Props) => {
@@ -41,20 +46,21 @@ const ProjectTile = (props: Props) => {
             {/* <h2 className='text-sm font-medium text-secondary-text pb-1'>{props.dates}</h2> */}
           </div>
           <div className='flex gap-4'>
-            {props.articleLink && (
-              <a
-                href={props.articleLink}
-              >
 
-                <MdOutlineArticle className='text-secondary-text transition-transform hover:text-primary hover:scale-110' size='1.5rem' />
-              </a>
-            )}
             {props.githubLink && (
               <a
                 href={props.githubLink}
                 target='_blank'
               >
                 <FiGithub className='text-secondary-text transition-transform hover:text-primary hover:scale-110' size='1.5rem' />
+              </a>
+            )}
+            {(props?.publishedLink || props?.articleLink) && (
+              <a
+                href={props?.publishedLink || props?.articleLink}
+                target='_blank'
+              >
+                <FiExternalLink className='text-secondary-text transition-transform hover:text-primary hover:scale-110' size='1.5rem' />
               </a>
             )}
           </div>
