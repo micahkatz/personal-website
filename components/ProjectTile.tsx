@@ -31,7 +31,7 @@ const ProjectTile = (props: Props) => {
     <div
       ref={wrappedTargetRef}
       className={`${styles.tileContainer} py-8 px-6 flex flex-col rounded-xl bg-sec-background transition ease-in-out delay-150 ${props.className}
-        ${willShow ? `animate-fade-in${props.index !== 0 ? `-${props.index}` : ''}` : ''}`
+        ${willShow ? `animate-fade-in` : ''}`
       }
     >
       <div className='flex-1'>
