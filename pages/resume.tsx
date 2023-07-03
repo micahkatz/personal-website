@@ -27,6 +27,14 @@ const resume = (props: Props) => {
             </Head>
             <NavBar />
             <iframe src='/micah-katz-resume-website.pdf' className='h-[calc(100vh-115px)] w-screen' />
+            <div
+                dangerouslySetInnerHTML={{
+                    __html: `<!-- Calendly badge widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/micahjkatz/30min', text: 'Schedule time with me', color: '#8783d1', textColor: '#E6E6EF', branding: true }); }</script>
+<!-- Calendly badge widget end -->`}}
+            />
         </div>
     )
 }
