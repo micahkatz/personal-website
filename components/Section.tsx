@@ -11,7 +11,7 @@ const Section = (props: Props) => {
 
     const targetRef = React.useRef<HTMLDivElement>(null);
 
-    const [isInViewport, wrappedTargetRef] = useIsInViewport({ target: targetRef, threshold: 25 })
+    const [isInViewport, wrappedTargetRef] = useIsInViewport({ target: targetRef, threshold: 15 })
     const [willShow, setWillShow] = React.useState(false)
     React.useEffect(() => {
         if (isInViewport) {

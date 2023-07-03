@@ -24,20 +24,10 @@ type Props = {
 const ProjectTile = (props: Props) => {
   const targetRef = React.useRef<HTMLDivElement>(null);
 
-  const [isInViewport, wrappedTargetRef] = useIsInViewport({ target: targetRef })
-  const [willShow, setWillShow] = React.useState(false)
 
-  React.useEffect(() => {
-    if (isInViewport) {
-      setWillShow(true)
-    }
-  }, [isInViewport])
   return (
     <div
-      ref={wrappedTargetRef}
-      className={`${styles.tileContainer} py-8 px-6 flex flex-col rounded-xl bg-sec-background transition ease-in-out delay-150 ${props.className}
-        ${willShow ? `animate-fade-in` : ''}`
-      }
+      className={`${styles.tileContainer} py-8 px-6 flex flex-col rounded-xl bg-sec-background transition ease-in-out delay-150 ${props.className} animate-fade-in`}
     >
       <div className='flex-1'>
         <div className='flex justify-between items-center'>
