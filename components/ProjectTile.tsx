@@ -1,9 +1,6 @@
-import React, { MutableRefObject } from 'react'
+import React from 'react'
+import { FiExternalLink, FiGithub } from 'react-icons/fi'
 import styles from '../styles/ProjectTile.module.css'
-import useIsInViewport from 'use-is-in-viewport'
-import { FiGithub, FiExternalLink } from 'react-icons/fi'
-import { GrArticle } from 'react-icons/gr'
-import { MdOutlineArticle } from 'react-icons/md'
 
 type MonthType = 'Jan' | 'Feb' | 'Mar' | 'Apr' | 'May' | 'Jun' | 'Jul' | 'Aug' | 'Sep' | 'Oct' | 'Nov' | 'Dec'
 type YearType = `${number}`

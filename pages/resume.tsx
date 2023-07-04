@@ -1,9 +1,5 @@
-import React from 'react'
-import styles from '../styles/About.module.css'
-import { FiGithub, FiInstagram } from 'react-icons/fi'
-import { FaLinkedin, FaFacebook } from 'react-icons/fa'
-import { ImStackoverflow, ImNpm } from 'react-icons/im'
 import Head from 'next/head'
+import React from 'react'
 import NavBar from '../components/NavBar'
 import { DARK_THEME } from '../themes'
 import { applyTheme } from '../themes/utils'
@@ -19,7 +15,7 @@ const resume = (props: Props) => {
         applyTheme(theme);
     }, [theme]);
     return (
-        <div className={`${styles.container} bg-primary-background flex-1 scroll-smooth`}>
+        <div className='bg-primary-background flex-1 scroll-smooth'>
             <Head>
                 <title className='text-lg text-primary-text'>Micah Katz Resume</title>
                 <meta name="description" content="Micah Katz's Resume" />

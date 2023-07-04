@@ -1,13 +1,10 @@
-import { useMediaQuery } from 'usehooks-ts'
 
-import Link from 'next/link'
-import React, { useState, useEffect } from 'react'
-import { useSsr } from 'usehooks-ts'
-import { RiMenu4Line, RiCloseFill } from 'react-icons/ri'
-import styles from 'styles/NavBar.module.css'
-import LogoImg from '../assets/logo.png'
 import Image from 'next/image'
+import Link from 'next/link'
 import { event } from 'nextjs-google-analytics'
+import React, { useEffect, useState } from 'react'
+import { RiCloseFill, RiMenu4Line } from 'react-icons/ri'
+import { useSsr } from 'usehooks-ts'
 
 type Props = {}
 
