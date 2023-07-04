@@ -2,7 +2,7 @@ import React from 'react'
 import useIsInViewport from 'use-is-in-viewport'
 
 interface Props extends React.PropsWithChildren {
-    title: string;
+    title?: string;
     id: string;
     className?: string;
 }
@@ -22,10 +22,10 @@ const Section = (props: Props) => {
     return (
         <section
             ref={wrappedTargetRef}
-            className={`${props.className} ${willShow ? 'animate-fade' : 'opacity-0'} py-16`}
+            className={`${props.className} ${willShow ? 'animate-fade' : 'opacity-0'} mb-8 md:mb-16`}
             id={props.id}
         >
-            <h1 className='text-primary-text text-3xl font-semibold mb-8'>{props.title}</h1>
+            {props.title && <h1 className='text-primary-text text-3xl font-semibold mb-8'>{props.title}</h1>}
             {props.children}
         </section>
     )

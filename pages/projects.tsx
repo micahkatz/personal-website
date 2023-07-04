@@ -140,7 +140,7 @@ const projects: ProjectType[] = [
 const ProjectsPage = () => {
     return (
         <Section title="Projects" className="text-left" id="projects">
-            <div className="mt-2 grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+            <div className="md:mt-2 grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
                 {projects.map((item) => (
                     <ProjectTile {...item} key={item.title} />
                 ))}
