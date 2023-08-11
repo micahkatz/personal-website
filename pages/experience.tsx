@@ -21,6 +21,7 @@ const CompanyTag = (props: CompanyTagProps) => (
 )
 
 const companies = [
+    'SelectQuote',
     'IBM',
     'JamFeed',
     '6 Points Sci-Tech Academy',
@@ -36,6 +37,16 @@ const experience = (props: Props) => {
     }
     const renderExperience = () => {
         switch (selectedCompany) {
+            case 'SelectQuote':
+                return <WorkExperience
+                    key={selectedCompany}
+                    company={selectedCompany}
+                    position='AI Software Developer II'
+                    dates='Aug 2023 - Present'
+                    description={[
+                        'I currently work in Python, TensorFlow, Node.js, and React to create AI solutions for SelectQuote Insurance Services',
+                    ]}
+                />
             case 'IBM':
                 return <WorkExperience
                     key={selectedCompany}

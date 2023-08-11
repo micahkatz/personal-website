@@ -19,11 +19,11 @@ const about = (props: Props) => {
                 Micah Katz
             </h2>
             <h1 className={'text-3xl md:text-4xl font-bold text-primary mb-6'}>
-                Full Stack Software Developer
+                AI Software Developer II @ SelectQuote
             </h1>
-            <p className={'text-lg text-secondary-text'}>
+            {/* <p className={'text-lg text-secondary-text'}>
                 I am primarily experienced in React.js and React-Native, with background in Express, NodeJS, Docker, and TypeScript
-            </p>
+            </p> */}
             {/* <MoonIcon className='icon' /> */}
             <div className='flex flex-wrap sm:grid pt-8 sm:grid-cols-6 gap-4 md:flex md:flex-wrap md:gap-8'>
                 <a
