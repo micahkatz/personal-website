@@ -30,6 +30,14 @@ type ProjectType = {
 };
 const projects: ProjectType[] = [
     {
+        title: "Workflow Manager UI",
+        description: [
+            "Created a full-stack UI for managing SelectQuote AI call workflows.",
+        ],
+        skills: ["Next.js", "React.js", "Node.js"],
+        dates: "Aug 2023 - Present",
+    },
+    {
         title: "Internal Retrieval Augmented Generation",
         description: [
             "Implemented Retrieval Augmented Generation on an internal UI. This allowed SelectQuote employees to ask questions about large knowledge bases.",
@@ -165,16 +173,16 @@ const projects: ProjectType[] = [
         skills: ["C/C++", "Arduino", "Soldering", "Breadboard Skills"],
         githubLink: "https://github.com/micahkatz/GarageDoorRFID",
     },
-    {
-        title: "Summer Camp Mealtimes Website (Personal Project)",
-        dates: "Jun 2019 - Jul 2019",
-        description: [
-            "Built a simple website for a summer camp (6 Points Sci-Tech Academy in Mass.) that displayed the status of an AWS database – to help regulate camper meal times. This was shown on TVs in the cafeteria and included an admin dashboard and announcement features.",
-        ],
-        skills: ["React.js", "CSS", "AWS"],
-        githubLink: "https://github.com/micahkatz/Sci-Tech-Queue-Website",
-        publishedLink: "https://d3qohousz9eozf.cloudfront.net/",
-    },
+    // {
+    //     title: "Summer Camp Mealtimes Website (Personal Project)",
+    //     dates: "Jun 2019 - Jul 2019",
+    //     description: [
+    //         "Built a simple website for a summer camp (6 Points Sci-Tech Academy in Mass.) that displayed the status of an AWS database – to help regulate camper meal times. This was shown on TVs in the cafeteria and included an admin dashboard and announcement features.",
+    //     ],
+    //     skills: ["React.js", "CSS", "AWS"],
+    //     githubLink: "https://github.com/micahkatz/Sci-Tech-Queue-Website",
+    //     publishedLink: "https://d3qohousz9eozf.cloudfront.net/",
+    // },
 ];
 
 const ProjectsPage = () => {
