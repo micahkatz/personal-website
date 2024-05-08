@@ -31,7 +31,7 @@ const companies = [
 type CompanyType = typeof companies[number]
 
 const experience = (props: Props) => {
-    const [selectedCompany, setSelectedCompany] = React.useState<null | CompanyType>('IBM')
+    const [selectedCompany, setSelectedCompany] = React.useState<null | CompanyType>('SelectQuote')
     const handleSelectCompany = (givenCompany: CompanyType) => {
         setSelectedCompany(givenCompany)
     }
@@ -44,7 +44,10 @@ const experience = (props: Props) => {
                     position='AI Software Developer II'
                     dates='Aug 2023 - Present'
                     description={[
-                        'I currently work in Python, TensorFlow, Node.js, and React to create AI solutions for SelectQuote Insurance Services',
+                        'Led a team of developers to build a feature-rich editor for managing LLM phone call workflows.',
+                        'Created neural networks that improved speed for a real-time production application 200-fold.',
+                        'Implemented a Large Action Model that lets employees interact with a company database via LLM.',
+                        'Integrated RAG, LLMs, and a LAM into a chat website for all SelectQuote employees.'
                     ]}
                 />
             case 'IBM':

@@ -30,6 +30,46 @@ type ProjectType = {
 };
 const projects: ProjectType[] = [
     {
+        title: "Internal Retrieval Augmented Generation",
+        description: [
+            "Implemented Retrieval Augmented Generation on an internal UI. This allowed SelectQuote employees to ask questions about large knowledge bases.",
+        ],
+        skills: ["Python","Langchain","DALLE API"],
+        dates: "Aug 2023 - Present",
+    },
+    {
+        title: "Interactive Large Action Model",
+        description: [
+            "Implemented cutting-edge AI concepts to allow an LLM to choose between different custom actions intelligently. This allowed SelectQuote employees to query live internal data and static files.",
+        ],
+        skills: ["Python","Langchain","DALLE API"],
+        dates: "Aug 2023 - Present",
+    },
+    {
+        title: "SelectQuote.ai",
+        description: [
+            "Created a full-stack UI for all SelectQuote employees to interact with multiple LLMs.",
+        ],
+        skills: ["Next.js", "React.js", "Node.js", "OpenAI API"],
+        dates: "Aug 2023 - Present",
+    },
+    {
+        title: "Entity Extraction Neural Network",
+        description: [
+            "Created a neural network to reduce latency and cost in a production application.",
+        ],
+        skills: ["Python", "Tensorflow", "Pandas"],
+        dates: "Jan 2024 - Mar 2024",
+    },
+    {
+        title: "Sentiment Classification Neural Network",
+        description: [
+            "Created a neural network to reduce latency and cost in a production application.",
+        ],
+        skills: ["Python", "Tensorflow", "Pandas"],
+        dates: "Jan 2024 - Mar 2024",
+    },
+    {
         title: "Team Solutions Dashboard",
         description: [
             "Developed a dashboard for my IBM team to do CRUD on our internal website containing markdown articles.",
@@ -125,16 +165,16 @@ const projects: ProjectType[] = [
         skills: ["C/C++", "Arduino", "Soldering", "Breadboard Skills"],
         githubLink: "https://github.com/micahkatz/GarageDoorRFID",
     },
-    // {
-    //     title: "Summer Camp Mealtimes Website (Personal Project)",
-    //     dates: "Jun 2019 - Jul 2019",
-    //     description: [
-    //         "Built a simple website for a summer camp (6 Points Sci-Tech Academy in Mass.) that displayed the status of an AWS database – to help regulate camper meal times. This was shown on TVs in the cafeteria and included an admin dashboard and announcement features.",
-    //     ],
-    //     skills: ["React.js", "CSS", "AWS"],
-    //     githubLink: "https://github.com/micahkatz/Sci-Tech-Queue-Website",
-    //     publishedLink: "https://d3qohousz9eozf.cloudfront.net/",
-    // },
+    {
+        title: "Summer Camp Mealtimes Website (Personal Project)",
+        dates: "Jun 2019 - Jul 2019",
+        description: [
+            "Built a simple website for a summer camp (6 Points Sci-Tech Academy in Mass.) that displayed the status of an AWS database – to help regulate camper meal times. This was shown on TVs in the cafeteria and included an admin dashboard and announcement features.",
+        ],
+        skills: ["React.js", "CSS", "AWS"],
+        githubLink: "https://github.com/micahkatz/Sci-Tech-Queue-Website",
+        publishedLink: "https://d3qohousz9eozf.cloudfront.net/",
+    },
 ];
 
 const ProjectsPage = () => {
