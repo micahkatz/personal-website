@@ -1,6 +1,7 @@
 import React from "react";
 import ProjectTile from "../components/ProjectTile";
 import Section from "../components/Section";
+import WideProject from "../components/WideProject";
 type MonthType =
     | "Jan"
     | "Feb"
@@ -27,6 +28,9 @@ type ProjectType = {
     publishedLink?: string;
     articleLink?: string;
     className?: string;
+    imageUri?: string;
+    imageColor?: string;
+    isFeatured?: boolean;
 };
 const projects: ProjectType[] = [
     {
@@ -36,13 +40,16 @@ const projects: ProjectType[] = [
         ],
         skills: ["Next.js", "React.js", "Node.js"],
         dates: "Aug 2023 - Present",
+        imageUri: '/AutoflowAdmin.png',
+        imageColor: '#FFFFFF',
+        isFeatured: true
     },
     {
         title: "Internal Retrieval Augmented Generation",
         description: [
             "Implemented Retrieval Augmented Generation on an internal UI. This allowed SelectQuote employees to ask questions about large knowledge bases.",
         ],
-        skills: ["Python","Langchain","DALLE API"],
+        skills: ["Python", "Langchain", "DALLE API"],
         dates: "Aug 2023 - Present",
     },
     {
@@ -50,7 +57,7 @@ const projects: ProjectType[] = [
         description: [
             "Implemented cutting-edge AI concepts to allow an LLM to choose between different custom actions intelligently. This allowed SelectQuote employees to query live internal data and static files.",
         ],
-        skills: ["Python","Langchain","DALLE API"],
+        skills: ["Python", "Langchain", "DALLE API"],
         dates: "Aug 2023 - Present",
     },
     {
@@ -60,6 +67,9 @@ const projects: ProjectType[] = [
         ],
         skills: ["Next.js", "React.js", "Node.js", "OpenAI API"],
         dates: "Aug 2023 - Present",
+        imageUri: '/SQAI.png',
+        imageColor: '#FFFFFF',
+        isFeatured: true
     },
     {
         title: "Entity Extraction Neural Network",
@@ -76,6 +86,17 @@ const projects: ProjectType[] = [
         ],
         skills: ["Python", "Tensorflow", "Pandas"],
         dates: "Jan 2024 - Mar 2024",
+    },
+    {
+        title: "Machine Learning Hardhat Alerts UI",
+        description: [
+            "Developed a live MVIE demo that was shown to notable clients and at worldwide conferences (MWC).",
+        ],
+        skills: ["React", "Node", "Linux", "MQTT", "MVI Edge"],
+        dates: "Nov 2022 - Feb 2023",
+        imageUri: '/mvie.png',
+        imageColor: '#262626',
+        isFeatured: true
     },
     {
         title: "Team Solutions Dashboard",
@@ -188,6 +209,14 @@ const projects: ProjectType[] = [
 const ProjectsPage = () => {
     return (
         <Section title="Projects" className="text-left" id="projects">
+            {projects.filter(prj => prj?.isFeatured).map((item, index) => (
+                <WideProject
+                    key={item.title}
+                    {...item}
+                    isFlipped={index % 2 === 0}
+                    className="mb-8"
+                />
+            ))}
             <div className="md:mt-2 grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
                 {projects.map((item) => (
                     <ProjectTile {...item} key={item.title} />
