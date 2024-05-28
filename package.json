@@ -9,6 +9,7 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "@radix-ui/react-dialog": "^1.0.5",
         "@svgr/webpack": "^6.5.1",
         "@types/node": "18.11.14",
         "@types/react": "18.0.26",
@@ -17,11 +18,11 @@
         "axios": "^1.2.2",
         "class-variance-authority": "^0.7.0",
         "clsx": "^2.1.1",
-        "custom-cursor-react": "^1.0.5",
         "linkedin-private-api": "^1.1.2",
         "lucide-react": "^0.378.0",
         "meshgrad": "^0.0.10",
         "next": "13.0.6",
+        "next-themes": "^0.3.0",
         "nextjs-google-analytics": "^2.3.0",
         "react": "18.2.0",
         "react-dom": "18.2.0",

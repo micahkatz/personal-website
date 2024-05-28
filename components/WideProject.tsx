@@ -2,7 +2,16 @@ import React from 'react'
 import { FiExternalLink, FiGithub } from 'react-icons/fi'
 import styles from '../styles/ProjectTile.module.css'
 import Image from 'next/image'
-
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "../components/ui/dialog"
+import { cn } from './lib/utils'
 type MonthType = 'Jan' | 'Feb' | 'Mar' | 'Apr' | 'May' | 'Jun' | 'Jul' | 'Aug' | 'Sep' | 'Oct' | 'Nov' | 'Dec'
 type YearType = `${number}`
 
@@ -26,15 +35,30 @@ const WideProject = (props: Props) => {
 
   return (
     <div
-      className={`${styles.tileContainer} py-8 px-6 flex rounded-xl transition ease-in-out delay-150 gap-8 ${props.className} animate-fade-in ${props?.isFlipped ? 'flex-row-reverse' : 'flex-row'}`}
+      className={cn(styles.tileContainer, `pb-12 px-2 flex flex-col-reverse rounded-xl transition ease-in-out delay-150 gap-8 animate-fade-in`, props.className, props?.isFlipped ? 'md:flex-row-reverse' : 'md:flex-row')}
     >
-      <div className='flex-1 bg-sec-background px-2 py-2 flex w-full rounded-xl overflow-hidden aspect-video'>
-        <div className={`bg-[${props?.imageColor || 'transparent'}] flex relative w-full rounded-xl overflow-hidden aspect-video`}>
-          <div className='flex-1 px-2 py-2 flex w-full rounded-xl overflow-hidden aspect-video'>
-            {props.imageUri && <Image src={props.imageUri} alt={`${props.title} Image`} fill className='object-cover aspect-video' />}
+      <Dialog>
+        <DialogTrigger className='flex-1 bg-sec-background px-2 py-2 flex w-full rounded-xl overflow-hidden  focus:outline-primary'>
+          <div className={`bg-[${props?.imageColor || 'transparent'}] flex relative w-full rounded-xl overflow-hidden aspect-video`}>
+            <div className='flex-1 px-2 py-2 flex w-full rounded-xl overflow-hidden aspect-video'>
+              {props.imageUri && <Image src={props.imageUri} alt={`${props.title} Image`} fill className='object-cover aspect-video' />}
+            </div>
           </div>
-        </div>
-      </div>
+        </DialogTrigger>
+        <DialogContent className="min-w-[calc(100vw-4rem)] max-h-[calc(100vh-4rem)] overflow-hidden focus:outline-primary">
+          <DialogHeader>
+            <DialogTitle>{props.title}</DialogTitle>
+            <DialogDescription>
+              {props.description}
+            </DialogDescription>
+          </DialogHeader>
+          <div className={`bg-[${props?.imageColor || 'transparent'}] flex relative rounded-xl overflow-hidden flex-1`}>
+            <div className='flex-1 flex !rounded-xl overflow-hidden aspect-video h-full'>
+              {props.imageUri && <Image src={props.imageUri} alt={`${props.title} Image`} fill className='object-contain aspect-video' />}
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
       <div className='flex-1 flex flex-col justify-center items-center'>
         <div>
           <div>

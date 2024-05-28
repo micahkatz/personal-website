@@ -218,7 +218,7 @@ const ProjectsPage = () => {
                 />
             ))}
             <div className="md:mt-2 grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
-                {projects.map((item) => (
+                {projects.filter(prj => !prj?.isFeatured).map((item) => (
                     <ProjectTile {...item} key={item.title} />
                 ))}
             </div>
