@@ -1,5 +1,6 @@
 import React from 'react'
-import useIsInViewport from 'use-is-in-viewport'
+import useIsInViewport from './lib/useIsInViewport';
+
 
 interface Props extends React.PropsWithChildren {
     title?: string;
