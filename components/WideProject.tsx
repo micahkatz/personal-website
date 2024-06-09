@@ -35,7 +35,10 @@ const WideProject = (props: Props) => {
 
   return (
     <div
-      className={cn(styles.tileContainer, `pb-12 px-2 flex flex-col-reverse rounded-xl transition ease-in-out delay-150 gap-8 animate-fade-in`, props.className, props?.isFlipped ? 'md:flex-row-reverse' : 'md:flex-row')}
+      className={cn('pb-12 px-2 flex flex-col-reverse rounded-xl transition ease-in-out delay-150 gap-8 animate-fade-in', 
+        props.className, 
+        props?.isFlipped ? 'md:flex-row-reverse' : 'md:flex-row'
+      )}
     >
       <Dialog>
         <DialogTrigger className='flex-1 bg-sec-background px-2 py-2 flex w-full rounded-xl overflow-hidden  focus:outline-primary'>
@@ -59,7 +62,7 @@ const WideProject = (props: Props) => {
           </div>
         </DialogContent>
       </Dialog>
-      <div className='flex-1 flex flex-col justify-center items-center'>
+      <div className='flex-1 flex flex-col justify-center md:items-center'>
         <div>
           <div>
             <div className='flex justify-between items-center'>

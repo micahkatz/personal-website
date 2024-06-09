@@ -29,16 +29,19 @@ export default function Home() {
 
       <NavBar />
       <main
-        className={`${styles.main} px-8 md:px-20 scroll-smooth`}
+        className={`${styles.main} px-8 md:px-20 scroll-smooth flex items-center`}
 
       // style={generateJSXMeshGradient(6)}
       // style=""
       >
+        <div className="max-w-6xl">
+
         <AboutPage />
         <ProjectsPage />
         <ExperiencePage />
         {/* <ContactPage /> */}
         <Footer />
+        </div>
         <div
           dangerouslySetInnerHTML={{
             __html: `<!-- Calendly badge widget begin -->
