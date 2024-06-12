@@ -46,6 +46,17 @@ const projects: ProjectType[] = [
     isFeatured: true,
   },
   {
+    title: "Agent Assist Desktop App",
+    description: [
+      "Developed an Electron app that records desktop audio, transcribes it, and extracts sentiment data to be displayed over time.",
+    ],
+    skills: ["Electron", "React.js", "Whisper API", "Custom ML Model", "Shadcn"],
+    dates: "Feb 2024 - May 2024",
+    imageUri: "/agent-assist.png",
+    imageColor: "#FFFFFF",
+    isFeatured: true,
+  },
+  {
     title: "Internal Retrieval Augmented Generation",
     description: [
       "Implemented Retrieval Augmented Generation on an internal UI. This allowed SelectQuote employees to ask questions about large knowledge bases.",
