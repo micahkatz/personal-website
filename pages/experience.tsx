@@ -25,8 +25,8 @@ const companies = [
     'SelectQuote',
     'IBM',
     'JamFeed',
-    '6 Points Sci-Tech Academy',
-    'Anubis LLC',
+    // '6 Points Sci-Tech Academy',
+    // 'Anubis LLC',
 ] as const
 
 type CompanyType = typeof companies[number]
