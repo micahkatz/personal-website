@@ -89,28 +89,28 @@ const experience = (props: Props) => {
                         'Designed and developed a custom “Smart Reader” API using Node.js to display news articles in a friendly format on the JamFeed UI, eliminating pop-up ads and increasing user retention.',
                     ]}
                 />
-            case '6 Points Sci-Tech Academy':
-                return <WorkExperience
-                    key={selectedCompany}
-                    company={selectedCompany}
-                    position='Camp Counselor and Specialist'
-                    dates='Jun 2019 - Aug 2020'
-                    description={[
-                        'Created curriculum to teach a weekly four-lesson class about AWS to campers from grade 5-10',
-                        'Managed a group of 15-20 campers for grades 7-8 for six weeks each summer.',
-                        'Prepared and executed large daily events.',
-                    ]}
-                />
-            case 'Anubis LLC':
-                return <WorkExperience
-                    key={selectedCompany}
-                    company={selectedCompany}
-                    position='Founding Software Developer'
-                    dates='Jan 2016 – May 2019'
-                    description={[
-                        'Led the UI and UX development of React Native social media apps.',
-                    ]}
-                />
+            // case '6 Points Sci-Tech Academy':
+            //     return <WorkExperience
+            //         key={selectedCompany}
+            //         company={selectedCompany}
+            //         position='Camp Counselor and Specialist'
+            //         dates='Jun 2019 - Aug 2020'
+            //         description={[
+            //             'Created curriculum to teach a weekly four-lesson class about AWS to campers from grade 5-10',
+            //             'Managed a group of 15-20 campers for grades 7-8 for six weeks each summer.',
+            //             'Prepared and executed large daily events.',
+            //         ]}
+            //     />
+            // case 'Anubis LLC':
+            //     return <WorkExperience
+            //         key={selectedCompany}
+            //         company={selectedCompany}
+            //         position='Founding Software Developer'
+            //         dates='Jan 2016 – May 2019'
+            //         description={[
+            //             'Led the UI and UX development of React Native social media apps.',
+            //         ]}
+            //     />
             default:
                 return <WorkExperience
                     key={selectedCompany}
