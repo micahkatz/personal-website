@@ -19,7 +19,7 @@ const about = (props: Props) => {
                 Micah Katz
             </h2>
             <h1 className={'text-3xl md:text-4xl font-bold text-primary mb-6'}>
-                AI Software Developer II @ SelectQuote
+                AI Software Developer @ Apple
             </h1>
             {/* <p className={'text-lg text-secondary-text'}>
                 I am primarily experienced in React.js and React-Native, with background in Express, NodeJS, Docker, and TypeScript

@@ -21,6 +21,7 @@ const CompanyTag = (props: CompanyTagProps) => (
 )
 
 const companies = [
+    'Apple',
     'SelectQuote',
     'IBM',
     'JamFeed',
@@ -31,12 +32,23 @@ const companies = [
 type CompanyType = typeof companies[number]
 
 const experience = (props: Props) => {
-    const [selectedCompany, setSelectedCompany] = React.useState<null | CompanyType>('SelectQuote')
+    const [selectedCompany, setSelectedCompany] = React.useState<null | CompanyType>('Apple')
     const handleSelectCompany = (givenCompany: CompanyType) => {
         setSelectedCompany(givenCompany)
     }
     const renderExperience = () => {
         switch (selectedCompany) {
+            case 'Apple':
+                return <WorkExperience
+                    key={selectedCompany}
+                    company={selectedCompany}
+                    position='AI Software Developer'
+                    dates='Nov 2024 - Present'
+                    description={[
+                        'I work on an internal AI IDE extension for Apple employees.',
+                        'Implement cutting-edge AI technologies like MCP, Tool-Calling, and Agentic RAG into my team\'s product.'
+                    ]}
+                />
             case 'SelectQuote':
                 return <WorkExperience
                     key={selectedCompany}
