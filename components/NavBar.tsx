@@ -89,10 +89,11 @@ const NavBar = (props: Props) => {
                 </Link>
                 <div className='hidden md:flex items-center'>
                     <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down' href='/'>About</Link>
-                    <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-2' href='/#projects'>Projects</Link>
-                    <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-3' href='/#experience'>Experience</Link>
-                    <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-4' href='mailto:micahj2110@gmail.com'>Contact</Link>
-                    <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-5 px-4 py-3 border rounded-lg border-primary-text hover:border-primary' onClick={clickResume} href='/resume'>Resume</Link>
+                    <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-2' href='/#research'>Research</Link>
+                    <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-3' href='/#projects'>Projects</Link>
+                    <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-4' href='/#experience'>Experience</Link>
+                    <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-5' href='mailto:micahj2110@gmail.com'>Contact</Link>
+                    <Link className='text-primary-text mr-4 hover:text-primary animate-slide-down-6 px-4 py-3 border rounded-lg border-primary-text hover:border-primary' onClick={clickResume} href='/resume'>Resume</Link>
                 </div>
                 <div className={`md:hidden flex flex-col items-end`}>
                     <div className={`flex flex-col p-4 rounded-lg transition-colors
@@ -111,6 +112,7 @@ const NavBar = (props: Props) => {
                             isMenuVisible && (
                                 <div className='md:hidden flex flex-col pr-8 pl-4 animate-fade'>
                                     <Link className='text-primary-text text-xl mb-4 hover:text-primary' href='/'>About</Link>
+                                    <Link className='text-primary-text text-xl mb-4 hover:text-primary' href='/#research'>Research</Link>
                                     <Link className='text-primary-text text-xl mb-4 hover:text-primary' href='/#projects'>Projects</Link>
                                     <Link className='text-primary-text text-xl mb-4 hover:text-primary' href='/#experience'>Experience</Link>
                                     <Link className='text-primary-text text-xl mb-4 hover:text-primary' href='mailto:micahj2110@gmail.com'>Contact</Link>

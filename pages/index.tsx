@@ -8,6 +8,7 @@ import { applyTheme } from '../themes/utils'
 import AboutPage from './about'
 import ExperiencePage from './experience'
 import ProjectsPage from './projects'
+import ResearchPage from './research'
 export default function Home() {
   const [theme, setTheme] = React.useState(DARK_THEME);
 
@@ -36,11 +37,12 @@ export default function Home() {
       >
         <div className="max-w-6xl">
 
-        <AboutPage />
-        <ProjectsPage />
-        <ExperiencePage />
-        {/* <ContactPage /> */}
-        <Footer />
+          <AboutPage />
+          <ResearchPage />
+          <ProjectsPage />
+          <ExperiencePage />
+          {/* <ContactPage /> */}
+          <Footer />
         </div>
         <div
           dangerouslySetInnerHTML={{
