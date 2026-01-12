@@ -1,6 +1,6 @@
 import React from 'react'
 import { FiExternalLink, FiGithub } from 'react-icons/fi'
-import styles from '../styles/paperTile.module.css'
+import styles from '../styles/PaperTile.module.css'
 
 type MonthType = 'Jan' | 'Feb' | 'Mar' | 'Apr' | 'May' | 'Jun' | 'Jul' | 'Aug' | 'Sep' | 'Oct' | 'Nov' | 'Dec'
 type YearType = `${number}`
